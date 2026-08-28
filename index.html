@@ -17,7 +17,7 @@
     --line:#22252a;
     --text:#f1f1ee;
     --sub:#8f939b;
-    --lime:#d8ff4f;
+    --lime:#8e51e0; /* 가독성을 개선한 조금 더 밝은 보라색 */
     --red:#ff6969;
     --purple:#b9a2ff;
     --orange:#ff9a55;
@@ -53,12 +53,12 @@
 
   /* ===== Hero ===== */
   .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;
-    background:radial-gradient(ellipse 900px 500px at 75% 30%, rgba(216,255,79,.06), transparent 60%),
+    background:radial-gradient(ellipse 900px 500px at 75% 30%, rgba(142,81,224,.15), transparent 60%),
                linear-gradient(180deg,#050506,#08090a 60%);}
   .hero-bg{position:absolute;inset:0;z-index:0;opacity:.85;}
   .hero-bg svg{width:100%;height:100%;}
   .rain{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;}
-  .rain span{position:absolute;top:-10%;width:1px;height:60px;background:linear-gradient(180deg,transparent,rgba(216,255,79,.5),transparent);
+  .rain span{position:absolute;top:-10%;width:1px;height:60px;background:linear-gradient(180deg,transparent,rgba(142,81,224,.6),transparent);
     animation:fall linear infinite;}
   @keyframes fall{0%{transform:translateY(-10%);}100%{transform:translateY(120vh);}}
   .hero-vignette{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(5,6,6,.92) 0%,rgba(5,6,6,.5) 42%,rgba(5,6,6,.2) 65%,rgba(5,6,6,.75) 100%);}
@@ -70,7 +70,7 @@
   .hero-title{font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:-.03em;font-size:clamp(48px,8vw,96px);line-height:.95;}
   .hero-title .outline{color:transparent;-webkit-text-stroke:0.5px #fff;display:inline-block;}
   .hero-title .flash{color:var(--lime);display:inline-block;animation:flicker 4s infinite;}
-  @keyframes flicker{0%,89%,91%,93%,100%{opacity:1;text-shadow:0 0 22px rgba(216,255,79,.5);}90%,92%{opacity:.3;text-shadow:none;}}
+  @keyframes flicker{0%,89%,91%,93%,100%{opacity:1;text-shadow:0 0 22px rgba(142,81,224,.7);}90%,92%{opacity:.3;text-shadow:none;}}
   .hero-desc{margin-top:24px;color:var(--sub);font-size:15px;line-height:1.85;font-weight:300;max-width:560px;}
 
   /* ===== Scroll Indicator ===== */
@@ -99,17 +99,17 @@
     letter-spacing: 0.3em;
     color: var(--lime);
     text-transform: uppercase;
-    text-shadow: 0 0 12px rgba(216, 255, 79, 0.6);
+    text-shadow: 0 0 12px rgba(142, 81, 224, 0.6);
   }
   .scroll-arrow {
     width: 24px;
     height: 38px;
-    border: 2px solid rgba(216, 255, 79, 0.4);
+    border: 2px solid rgba(142, 81, 224, 0.5);
     border-radius: 14px;
     position: relative;
     display: flex;
     justify-content: center;
-    box-shadow: 0 0 10px rgba(216, 255, 79, 0.15);
+    box-shadow: 0 0 10px rgba(142, 81, 224, 0.2);
   }
   .scroll-arrow::before {
     content: '';
@@ -146,7 +146,7 @@
   .stat-row{display:flex;gap:44px;flex-wrap:wrap;padding-bottom:26px;margin-bottom:30px;border-bottom:1px dashed var(--line);}
   .stat b{font-family:'Archivo',sans-serif;font-size:30px;font-weight:800;display:block;}
   .stat span{color:var(--sub);font-size:12px;font-family:'JetBrains Mono',monospace;}
-  .stat b.lime{color:var(--lime);text-shadow:0 0 16px rgba(216,255,79,.35);}
+  .stat b.lime{color:var(--lime);text-shadow:0 0 16px rgba(142,81,224,.4);}
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
   .info-card{background:var(--panel);border:1px solid var(--line);padding:22px 24px;border-radius:6px;}
   .info-card .tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--lime);font-weight:600;letter-spacing:.08em;margin-bottom:8px;}
@@ -234,6 +234,7 @@
   .prime-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.08em;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
   .prime-card .name{font-size:16px;font-weight:700;margin-bottom:6px;}
   .prime-card p{color:var(--sub);font-size:12.5px;}
+  .ping-dot{width:15px;height:15px;background:var(--purple);border-radius:50%;animation:ping 1.3s infinite;}
   @keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,105,105,.6);}70%{box-shadow:0 0 0 8px rgba(255,105,105,0);}100%{box-shadow:0 0 0 0 rgba(255,105,105,0);}}
   .quote-block{border-left:2px solid var(--purple);padding-left:16px;color:var(--sub);font-size:13px;margin-top:20px;}
 
