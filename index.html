@@ -133,14 +133,14 @@
   section{position:relative;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 5%;}
   .section-pad{padding:100px 0;border-bottom:1px solid var(--line);}
-  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:32px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:12px;}
   .sec-num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--lime);font-weight:600;}
   .sec-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(24px,3vw,32px);letter-spacing:-.02em;}
   .sec-sub{color:var(--sub);font-size:13px;margin-left:4px;}
   [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
   [data-reveal].in{opacity:1;transform:translateY(0);}
 
-  .lead{color:#c9ccd2;font-size:14px;line-height:1.85;margin-bottom:30px;max-width:640px;}
+  .lead{color:#c9ccd2;font-size:14px;line-height:1.85;margin-bottom:30px;max-width:820px;}
 
   /* ===== 01 세계관 ===== */
   .stat-row{display:flex;gap:44px;flex-wrap:wrap;padding-bottom:26px;margin-bottom:30px;border-bottom:1px dashed var(--line);}
@@ -675,9 +675,9 @@
         <div class="name">공식 작전 방송</div>
         <p>7초 지연 송출 및 검열이 이루어집니다.</p>
       </div>
-      <div class="prime-card black">
+      <div class="prime-card">
         <div class="prime-label" style="color:var(--red);">BLACK LABEL <span class="ping-dot"></span></div>
-        <div class="name">무검열 자율 방송</div>
+       <b style="color: var(--red);">무검열 자율 방송</b>
         <p>디펙터와 무소속자의 전투·도주·일상을 있는 그대로 송출합니다.</p>
       </div>
     </div>
@@ -686,14 +686,21 @@
     <div class="two-col" style="margin-top: 16px;">
       <div class="info-card">
         <div class="tag" style="color: var(--purple);">RATING SYSTEM</div>
-        <b style="color: var(--purple);">프라임 등급 (F ~ SSS)</b>
-        <p>인기, 시청률, 쇼맨십을 종합적으로 고려하여 책정되는 방송 파급력 및 영향력 등급 체계입니다.</p>
+        <span style="color: var(--white); font-weight: bold;">프라임 등급</span> <span style="color: var(--purple); font-weight: bold;">(F ~ SSS)</span>
       </div>
       <div class="info-card">
         <div class="tag" style="color: var(--purple);">STAR METRIC</div>
         <b>스타성 지표</b>
         <p>순수 전투력이 낮더라도 쇼맨십이 뛰어나다면 프라임 등급은 SSS급까지 도달할 수 있습니다.</p>
       </div>
+    </div>
+
+    <div class="info-card" style="margin-top: 16px;">
+        <div class="prime-label" style="color:var(--purple);">BENEFITS</div>
+      <b style="color: var(--white);">등급 상승 혜택</b>
+      <p>
+        대중 여론전 주도, 금융 신용도 극대화, 민간 자본 기반 인프라·생존권 독점 등 공권력조차 함부로 못 건드리는 초법적 민간 권력이자 신분증이 되어줍니다.
+      </p>
     </div>
 
     <div class="quote-block">이능범죄와 전투가 오락·광고·상품으로 소비되며, 시청률과 스폰서가 현장 판단에도 직접적인 영향을 줍니다.</div>
